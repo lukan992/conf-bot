@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "hdbscan>=0.8.41",
     "ipykernel>=7.2.0",
     "librosa>=0.11.0",
     "matplotlib>=3.10.8",
@@ -12,6 +13,7 @@ dependencies = [
     "pyannote-audio>=4.0.4",
     "scipy>=1.17.0",
     "silero-vad>=6.2.0",
+    "soundfile>=0.13.1",
     "ten-vad>=1.0.6.8",
     "torch>=2.10.0",
     "torchcodec>=0.10.0",

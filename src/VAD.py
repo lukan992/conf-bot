@@ -3,11 +3,11 @@ import numpy as np
 import scipy.io.wavfile as wav
 
 
-def run_vad(audio_path: str):
-    sr, audio = wav.read(audio_path)  # audio в int16, 16 kHz
-    if audio.ndim == 2:
-        audio = audio.astype(np.int32).mean(axis=1)
-        audio = np.clip(np.rint(audio), -32768, 32767).astype(np.int16)
+def run_vad(audio: np.ndarray, sr: int):
+    # sr, audio = wav.read(audio_path)  audio в int16, 16 kHz
+    # if audio.ndim == 2:
+    #     audio = audio.astype(np.int32).mean(axis=1)
+    #     audio = np.clip(np.rint(audio), -32768, 32767).astype(np.int16)
 
     # -----------------------------
     # 2) TEN-VAD frame inference
