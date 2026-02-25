@@ -3,7 +3,7 @@ import numpy as np
 import scipy.io.wavfile as wav
 
 
-def run_vad(audio: np.ndarray, sr: int):
+def run_vad(audio: np.ndarray, sr: int, trash: float = 0.5):
     # sr, audio = wav.read(audio_path)  audio в int16, 16 kHz
     # if audio.ndim == 2:
     #     audio = audio.astype(np.int32).mean(axis=1)
@@ -12,7 +12,7 @@ def run_vad(audio: np.ndarray, sr: int):
     # -----------------------------
     # 2) TEN-VAD frame inference
     # -----------------------------
-    vad = TenVad(hop_size=256, threshold=0.5)
+    vad = TenVad(hop_size=256, threshold=trash)
 
     frames = []  # store (prob, flag)
     num_frames = len(audio) // vad.hop_size

@@ -29,4 +29,4 @@ def convert_wav_to_16k_mono(
 
 
 if __name__ == "__main__":
-    convert_wav_to_16k_mono("data/audio/audio-test1.wav", "data/audio/artur.wav")
+    convert_wav_to_16k_mono("data/audio/test_conf1.wav", "data/audio/test_conf1_16k.wav")

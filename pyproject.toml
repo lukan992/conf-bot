@@ -3,18 +3,20 @@ name = "vad-conf-bot"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12,<3.13"
 dependencies = [
-    "hdbscan>=0.8.41",
+    "faster-whisper>=1.2.1",
+    "hdbscan==0.8.40",
     "ipykernel>=7.2.0",
     "librosa>=0.11.0",
     "matplotlib>=3.10.8",
     "nemo-toolkit[asr]>=2.6.2",
     "pyannote-audio>=4.0.4",
+    "python-dotenv>=1.2.1",
     "scipy>=1.17.0",
     "silero-vad>=6.2.0",
     "soundfile>=0.13.1",
     "ten-vad>=1.0.6.8",
     "torch>=2.10.0",
-    "torchcodec>=0.10.0",
+    "torchaudio>=2.10.0",
 ]
